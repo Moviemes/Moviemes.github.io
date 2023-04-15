@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
+
+
+		<!-- Titulo del sitio web -->
+		<title>Moviemes</title>
+
+
+	<!-- El sitio acepte caracteres de tildes y otros -->
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	
+	<!-- Scripts css, ajustes y fuentes -->
 	<link rel="stylesheet" href="/css/estilos.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
-	<title>Netflix</title>
+	
+
+
 </head>
 <body>
 	<header>
 		<div class="contenedor">
-			<h2 class="logotipo">FalconMasters</h2>
+			<h2 class="logotipo">Moviemes</h2>
 			<nav>
 				<a href="/index.html" class="activo">Inicio</a>
 				<a href="/pagina_series.html">Series</a>
@@ -22,22 +34,33 @@
 	</header>
 
 	<main>
+
 		<div class="pelicula-principal">
 			<div class="contenedor">
-				<h3 class="titulo">Interestellar</h3>
+
+				<!-- Titulo y la descripcion-->
+				<h3 class="titulo">Bienvenidxs a Moviemes</h3>
 				<p class="descripcion fondo-translucido"> 
-					Bienvenidxs a Moviemes, el mundo donde tus memes favoritos de películas y series conviven en armonía. 
+					El mundo donde tus memes favoritos de películas y series conviven en armonía. 
 				<br>
 				¿Qué quieres ver hoy?				</p>
+
+				<!-- Botones debajo de la descripcion-->
 				<button role="button" class="boton"><i class="fas fa-play"></i>Series</button>
 				<button role="button" class="boton"><i class="fas fa-play"></i>Películas</button>
 				<button role="button" class="boton"><i class="fas fa-info-circle"></i>Más información</button>
 			</div>
 		</div>
 
+		<!--------------------------------------------------------------------------------------------------------------------->
+		<!-- Codigo para el corrosel de series -->
+
+
 		<div class="peliculas-recomendadas contenedor">
 			<div class="contenedor-titulo-controles">
-				<h3>Películas Recomendadas</h3>
+				<!-- Titulo de la seccion -->
+				<h3>Memes de Películas</h3>
+
 				<div class="indicadores"></div>
 			</div>
 
@@ -45,99 +68,117 @@
 				<button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
 
 				<div class="contenedor-carousel">
+
 					<div class="carousel">
-						<div class="pelicula img-ajustada">
+
+						<!-- Aqui van las caraturas y href para ir a la descripcion de cada una -->
+
+						<div class="pelicula">
 							<a href="#"><img src="/img/caratulas/Backyardigans.jpg" alt=""></a>
 						</div>
 						<div class="pelicula">
-							<a href="#"><img src="/img/a_ver_a_ver_que_paso.jpeg" alt=""></a>
+							<a href="#"><img src="img/caratulas/the-simpsons.jpg" alt=""></a>
 						</div>
 						<div class="pelicula">
-							<a href="#"><img src="/img/bob.jpg" alt=""></a>
+							<a href="#"><img src="img/caratulas/the-amazing-world-of-gumball-gumball_2.webp" alt=""></a>
 						</div>
 						<div class="pelicula">
-							<a href="#"><img src="/img/calamardo.jpg" alt=""></a>
+							<a href="#"><img src="img/caratulas/sherk_2.jpg" alt=""></a>
 						</div>
 						<div class="pelicula">
-							<a href="#"><img src="img/calamardo.jpg" alt=""></a>
+							<a href="#"><img src="img/caratulas/bob_esponja_2.jpg" alt=""></a>
 						</div>
 						<div class="pelicula">
-							<a href="#"><img src="/img/pedro_pascal.gif" alt=""></a>
+							<a href="#"><img src="/img/caratulas/bob_esponja.jpg" alt=""></a>
 						</div>
 						<div class="pelicula">
-							<a href="#"><img src="/img/monster_inc.jpg" alt=""></a>
+							<a href="#"><img src="img/caratulas/bob_esponja_3.webp" alt=""></a>
 						</div>
 						<div class="pelicula">
-							<a href="#"><img src="/img/Las locuras del emperador.jpeg" alt=""></a>
+							<a href="#"><img src="img/caratulas/the-amazing-world-of-gumball-gumball.jpg" alt=""></a>
 						</div>
 						<div class="pelicula">
-							<a href="#"><img src="/img/Las Locuras del Emperador_2.jpeg" alt=""></a>
+							<a href="#"><img src="img/caratulas/sherk_2.jpg" alt=""></a>
 						</div>
 						<div class="pelicula">
-							<a href="#"><img src="/img/sherk.png" alt=""></a>
+							<a href="#"><img src="img/caratulas/Backyardigans.jpg" alt=""></a>
 						</div>
+
+
+
+
 					</div>
 				</div>
-
+			
 				<button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
 			</div>
 		</div>
 
-
-
-		
+		<!--------------------------------------------------------------------------------------------------------------------->
+		<!-- Codigo para el corrosel de series -->
 
 		<div class="peliculas-recomendadas contenedor">
+
 			<div class="contenedor-titulo-controles">
-				<h3>Series Recomendadas</h3>
-				<div class="indicadores"></div>
+				<!-- Titulo de la seccion -->
+				<h3>Memes de Series</h3>
+
 			</div>
 
 			<div class="contenedor-principal">
-				<button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+
 
 				<div class="contenedor-carousel">
 					<div class="carousel">
+
+						<!-- Aqui van las caraturas y href para ir a la descripcion de cada una -->
 						<div class="pelicula">
-							<a href="#"><img src="/img/Backyardigans.jpg" alt=""></a>
+							<a href="#"><img src="/img/caratulas/Backyardigans.jpg" alt=""></a>
 						</div>
 						<div class="pelicula">
-							<a href="#"><img src="/img/a_ver_a_ver_que_paso.jpeg" alt=""></a>
+							<a href="#"><img src="img/caratulas/the-simpsons.jpg" alt=""></a>
 						</div>
 						<div class="pelicula">
-							<a href="#"><img src="/img/bob.jpg" alt=""></a>
+							<a href="#"><img src="img/caratulas/the-amazing-world-of-gumball-gumball_2.webp" alt=""></a>
 						</div>
 						<div class="pelicula">
-							<a href="#"><img src="/img/calamardo.jpg" alt=""></a>
+							<a href="#"><img src="img/caratulas/sherk_2.jpg" alt=""></a>
 						</div>
 						<div class="pelicula">
-							<a href="#"><img src="img/calamardo.jpg" alt=""></a>
+							<a href="#"><img src="img/caratulas/bob_esponja_2.jpg" alt=""></a>
 						</div>
 						<div class="pelicula">
-							<a href="#"><img src="/img/pedro_pascal.gif" alt=""></a>
+							<a href="#"><img src="/img/caratulas/bob_esponja.jpg" alt=""></a>
 						</div>
 						<div class="pelicula">
-							<a href="#"><img src="/img/monster_inc.jpg" alt=""></a>
+							<a href="#"><img src="img/caratulas/bob_esponja_3.webp" alt=""></a>
 						</div>
 						<div class="pelicula">
-							<a href="#"><img src="/img/Las locuras del emperador.jpeg" alt=""></a>
+							<a href="#"><img src="img/caratulas/the-amazing-world-of-gumball-gumball.jpg" alt=""></a>
 						</div>
 						<div class="pelicula">
-							<a href="#"><img src="/img/Las Locuras del Emperador_2.jpeg" alt=""></a>
+							<a href="#"><img src="img/caratulas/sherk_2.jpg" alt=""></a>
 						</div>
 						<div class="pelicula">
-							<a href="#"><img src="/img/sherk.png" alt=""></a>
-						</div>
+							<a href="#"><img src="img/caratulas/Backyardigans.jpg" alt=""></a>
+
 					</div>
 				</div>
 
-				<button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+
 			</div>
 		</div>
 
+
+		
 	</main>
 	
+
+	<!-- Scripts de javascript -->
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 	<script src="js/main.js"></script>
+	<script src="js/flechas.js"></script>
+
+
 </body>
 </html>

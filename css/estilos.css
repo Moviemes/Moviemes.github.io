@@ -138,6 +138,8 @@ header nav a.activo {
 }
 
 /* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
+
+
 .contenedor-titulo-controles {
 	display: flex;
 	justify-content: space-between;
@@ -148,6 +150,16 @@ header nav a.activo {
 	color: #fff;
 	font-size: 30px;
 }
+
+.indicadores button {
+	background: #fff;
+	height: 3px;
+	width: 10px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+}
+
 
 .contenedor-titulo-controles .indicadores button {
 	background: #fff;
