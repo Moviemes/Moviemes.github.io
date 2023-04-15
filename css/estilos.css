@@ -13,7 +13,24 @@ body {
 	background: var(--fondo);
 	font-family: 'Open Sans', sans-serif;
 }
+
+/* ---- ----- ----- CLASES NUEVAS POR HEL :D ----- ----- ----- */
+
+.img-ajustada {
+	width: 600px !important;
+	height: 388px !important;
+	object-fit: cover; /* para asegurar que la imagen ocupe todo el espacio sin deformarse */
+  }
+
+.descripcion.fondo-translucido {
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 10px;
+	color: #fff;
+}
+
   
+
+/* ---- ----- ----- ------------------------ ----- ----- ----- */
 
 .contenedor {
 	width: 90%;
@@ -48,18 +65,37 @@ header nav a.activo {
 	color: #FFF;
 }
 
-/* ---- ----- ----- Pelicula Principal ----- ----- ----- */
+/* ---- ----- ----- Pelicula Principal ORIGINAL 
+
 .pelicula-principal {
 	font-size: 16px;
 	min-height: 40.62em;
 	color: #fff;
-	background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../img/backdrop.jpg);
+	background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../img/bk/bk4.jpg);
 	background-position: center center;
 	background-size: cover;
 	margin-bottom: 3.12em;
 	display: flex;
 	align-items: end;
 }
+
+----- ----- ----- */
+
+/* ---- ----- ----- Pelicula Principal ----- ----- ----- */
+.pelicula-principal {
+	font-size: 16px;
+	min-height: 65vh; /* Ajusta la altura mínima para que el fondo cubra el 80% de la pantalla */
+	color: #fff;
+	background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../img/bk/bk4.jpg);
+	background-position: center center;
+	background-size: cover; /* Ajusta el tamaño del fondo a auto y 100% */
+	margin-bottom: 3.12em;
+	display: flex;
+	align-items: end;
+}
+
+
+
 
 .pelicula-principal .contenedor {
 	margin: 0 auto;
