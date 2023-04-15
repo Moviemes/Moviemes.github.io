@@ -28,6 +28,9 @@ body {
 	color: #fff;
 }
 
+.container-carrosel-bordes {
+	padding: 0 75px; /* ajusta el valor del padding según lo que necesites */
+  }
   
 
 /* ---- ----- ----- ------------------------ ----- ----- ----- */
@@ -83,16 +86,18 @@ header nav a.activo {
 
 /* ---- ----- ----- Pelicula Principal ----- ----- ----- */
 .pelicula-principal {
-	font-size: 16px;
+    display: flex;
+	font-size: 1em;
 	min-height: 65vh; /* Ajusta la altura mínima para que el fondo cubra el 80% de la pantalla */
 	color: #fff;
 	background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../img/bk/bk4.jpg);
 	background-position: center center;
 	background-size: cover; /* Ajusta el tamaño del fondo a auto y 100% */
 	margin-bottom: 3.12em;
-	display: flex;
+	
 	align-items: end;
 }
+
 
 
 
