@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<!-- Titulo del sitio web -->
 	<title>Moviemes</title>
 	<!-- Icono de la pagina -->
-    <link rel="shortcut icon" href="images/netflix.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/icono/Logo.png" type="image/x-icon">
 	<!-- El sitio acepte caracteres de tildes y otros -->
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,13 +32,12 @@
 <body>
 	<header>
 		<div class="contenedor">
-			<h2 class="logotipo">Moviemes</h2>
+			<h2 class="logotipo"><a href="/index.html">  Moviemes </a></h2>
 			<nav>
 				<a href="/index.html" class="activo">Inicio</a>
-				<a href="/pagina_series.html">Series</a>
-				<a href="/pagina_peliculas.html">Películas</a>
-				<a href="#">Más Recientes</a>
-				<a href="#">Mi lista</a>
+				<a href="#memes-series" id="enlace-series">Series</a>
+				<a href="#memes-peliculas" id="enlace-peliculas">Películas</a>
+				<a href="#informacion" id="enlace-proyecto">Información del Proyecto</a>
 			</nav>
 		</div>
 	</header>
@@ -50,6 +49,7 @@
 
 				<!-- Titulo y la descripcion-->
 				<h3 class="titulo">Bienvenidxs a Moviemes</h3>
+				
 				<p class="descripcion fondo-translucido"> 
 					El mundo donde tus memes favoritos de películas y series conviven en armonía. 
 				<br>
@@ -66,15 +66,10 @@
 
 
 
-    <br>
-    <br>
-    <br>
-    <br>
-
 		<div class="peliculas-recomendadas contenedor">
 			<div class="contenedor-titulo-controles">
 				<!-- Titulo de la seccion -->
-				<h3>Memes de Series</h3>
+				<h3 id="memes-series">Memes de Series</h3>
 
 				<div class="indicadores"></div>
 			</div>
@@ -87,7 +82,12 @@
 					<div class="carousel">
 
 						<!-- Aqui van las caraturas y href para ir a la descripcion de cada una -->
-
+						<div class="pelicula">
+							<a href="/paginas/bob-esponja.html"><img src="img/caratulas-horizontales/bob_esponja_2.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="/paginas/bob-esponja-2.html"><img src="/img/caratulas-horizontales/bob_esponja.jpg" alt=""></a>
+						</div>
 						<div class="pelicula">
 							<a href="#"><img src="/img/caratulas-horizontales/Backyardigans.jpg" alt=""></a>
 						</div>
@@ -99,12 +99,6 @@
 						</div>
 						<div class="pelicula">
 							<a href="#"><img src="img/caratulas-horizontales/sherk_2.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/caratulas-horizontales/bob_esponja_2.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="/img/caratulas-horizontales/bob_esponja.jpg" alt=""></a>
 						</div>
 						<div class="pelicula">
 							<a href="#"><img src="img/caratulas-horizontales/bob_esponja_3.webp" alt=""></a>
@@ -132,6 +126,15 @@
 
 
 		<div  class="container-carrosel-bordes">
+
+			<div class="contenedor-titulo-controles">
+				<!-- Titulo de la seccion -->
+				<h3 id="memes-peliculas">Memes de Peliculas</h3>
+
+				<div class="indicadores"></div>
+			</div>
+
+			<br>
 		
 			<div class="carrosel-filmes">
 				<div class="owl-carousel owl-theme">
@@ -164,6 +167,37 @@
 			</div>
 		</div>
 
+		<br>
+		<br>
+		<br>
+		<br>
+
+
+		<div class="informacion-final" id = "informacion">
+			<div class="contenedor">
+				<br>
+				<!-- Titulo y la descripcion-->
+				<h3 class="titulo"> Información del Proyecto</h3>
+				
+				<p class="descripcion"> 
+					Moviemes es una página web creada por Helen Daza, tiene como objetivo proporcionar a los usuarios una experiencia única 
+					y divertida al ver los memes de sus películas y series favoritas. Este proyecto, consiste en una página web 
+					desarrollada por medio de Visual Studio Code utilizando los lenguajes de programación HTML, CSS y JavaScript, 
+					y publicada en GitHub.io para su acceso en tiempo real. 
+					La página es similar a la de Netflix, cuando se hace clic en una película o serie, se abre una galería de memes 
+					relacionados con ese contenido. El objetivo principal es ofrecer un nuevo enfoque al ver contenido audiovisual y 
+					brindar un espacio donde los usuarios puedan reír con los memes
+					relacionados con sus películas y series favoritas. Los resultados esperados incluyen una mayor interacción y 
+					compromiso de los usuarios con la plataforma, así como la creación de una comunidad en línea basada 
+					en el humor y la pasión por el cine y la televisión.
+			</div>
+		</div>
+		
+			
+		
+		</div>
+
+	
 
 
 	<!-- Scripts de javascript -->
@@ -173,6 +207,57 @@
     <script src="js/own/jquery.min.js"></script>
     <script src="js/own/owl.carousel.min.js"></script>
     <script src="js/own/main.js"></script>
+
+
+	<script>
+		// Obtener la posición vertical de la sección de "Series"
+		const seriesPosition = document.querySelector('#memes-series').offsetTop;
+	  
+		// Obtener la posición vertical de la sección de "Películas"
+		const peliculasPosition = document.querySelector('#memes-peliculas').offsetTop;
+	  
+		// Obtener la posición vertical de la sección de "Información del Proyecto"
+		const proyectoPosition = document.querySelector('#informacion').offsetTop;
+	  
+		// Obtener los enlaces correspondientes
+		const enlaceSeries = document.querySelector('#enlace-series');
+		const enlacePeliculas = document.querySelector('#enlace-peliculas');
+		const enlaceProyecto = document.querySelector('#enlace-proyecto');
+	  
+		// Agregar un evento "scroll" al documento
+		document.addEventListener('scroll', function() {
+		  // Obtener la posición vertical actual de la página
+		  const scrollPosition = window.scrollY;
+	  
+		  // Comprobar si estamos en la sección de "Series"
+		  if (scrollPosition >= seriesPosition && scrollPosition < peliculasPosition) {
+			// Agregar la clase "activo" al enlace de "Series"
+			enlaceSeries.classList.add('activo');
+		  } else {
+			// Quitar la clase "activo" del enlace de "Series"
+			enlaceSeries.classList.remove('activo');
+		  }
+	  
+		  // Comprobar si estamos en la sección de "Películas"
+		  if (scrollPosition >= peliculasPosition && scrollPosition < proyectoPosition) {
+			// Agregar la clase "activo" al enlace de "Películas"
+			enlacePeliculas.classList.add('activo');
+		  } else {
+			// Quitar la clase "activo" del enlace de "Películas"
+			enlacePeliculas.classList.remove('activo');
+		  }
+	  
+		  // Comprobar si estamos en la sección de "Información del Proyecto"
+		  if (scrollPosition >=proyectoPosition) {
+			// Agregar la clase "activo" al enlace de "Información del Proyecto"
+			enlaceProyecto.classList.add('activo');
+			} else {
+			// Quitar la clase "activo" del enlace de "Información del Proyecto"
+			enlaceProyecto.classList.remove('activo');
+			}});
+	</script>
+
+	  
 
 
 </body>

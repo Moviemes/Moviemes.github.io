@@ -6,6 +6,7 @@ const flechaDerecha = document.getElementById('flecha-derecha');
 const indicadores = document.querySelector('.indicadores');
 let posicionActual = 0;
 
+
 // ? ----- ----- Event Listener para la flecha derecha. ----- -----
 flechaDerecha.addEventListener('click', () => {
   fila.scrollLeft += fila.offsetWidth / 5;
