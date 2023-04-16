@@ -23,16 +23,25 @@ body {
   }
 
 .centro {
-	display: block !important; /* Establece que el elemento sea de tipo bloque */
-	margin: 0 auto !important; /* Centra el elemento horizontalmente */
-	}
+    display: block !important;
+    margin: 0 auto !important;
+    text-align: center; /* Agregamos esta propiedad para centrar el contenido horizontalmente */
+	
+}
+
+.tamano-descipcion{
+	font-size: 110% !important;
+}
+
 	
 .fondo-translucido-redondo {
+	max-width: 1000px;
 	display: inline-block; /* Establece que el elemento sea de tipo en línea y respete los márgenes horizontales */
-	padding: 0.5em; /* Añade un poco de espacio interno para que se vea mejor */
-	background-color: rgba(0, 0, 0, 0.5); /* Establece un color de fondo negro translúcido */
+	padding: 2em; /* Añade un poco de espacio interno para que se vea mejor */
+	background-color: rgba(0, 0, 0, 0.7); /* Establece un color de fondo negro translúcido */
 	border-radius: 10px; /* Redondea los bordes del elemento */
 	color: #fff; /* Establece el color del texto en blanco */
+	font-weight: bold !important;
 	}
 
 .descripcion.fondo-translucido {
@@ -143,6 +152,73 @@ body {
 .pelicula-principal-meme #pausa-reanudar:hover {
     background-color: red;
 }
+
+/* ---- ----- ----- ------------------------ ----- ----- ----- */
+/* ---- ----- ----- GALERIA DE IMAGENES ----- ----- ----- */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container-img{
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px;
+    grid-gap: 20px;
+}
+.container-img .box-img figure{
+    width: 100%;
+    height: 100%;
+}
+.container-img .box-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container-img .box-img:nth-child(1){
+    grid-column-start: span 2;
+}
+.container-img .box-img:nth-child(4){
+    grid-row-start: span 2;
+}
+@media screen and (max-width:800px){
+    .container-img{
+        width: 95%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        grid-template-rows: 200px;
+    }
+    .container-img .box-img:nth-child(1){
+        grid-column-start: span 1;
+    }
+}
+@media screen and (max-width:500px){
+    .container-img{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .container-img .box-img img{
+        height: 200px;
+    }
+}
+
+
+
+
+
+
+
+
+
 
 /* ---- ----- ----- ------------------------ ----- ----- ----- */
 /* ---- ----- --- PARA LAS PAGINAS DE MEMES V1 --- ----- ----- */
