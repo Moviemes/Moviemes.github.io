@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<!-- Titulo del sitio web -->
+	<title>Moviemes - Bee Movie</title>
+	<!-- Icono de la pagina -->
+    <link rel="shortcut icon" href="../img/icono/Logo.png" type="image/x-icon">
+	<!-- El sitio acepte caracteres de tildes y otros -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Scripts css, ajustes y fuentes -->
+	<link rel="stylesheet" href="../css/estilos.css">
+	<!--owl css-->
+	<link rel="stylesheet" href="../style/owl/owl.carousel.min.css">
+	<link rel="stylesheet" href="../style/owl/owl.theme.default.min.css">
+
+	
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+	
+
+
+
+    <link rel="stylesheet" href="../style/main_2.css">
+
+    <!--Responsividade-->
+    <link rel="stylesheet" href="../style/responsive.css">
+    
+
+</head>
+<body>
+	<header>
+		<div class="contenedor">
+			<h2 class="logotipo"><a href="/index.html">  Moviemes </a></h2>
+			<nav>
+				<a href="/index.html" class="activo">Atrás</a>
+				<a href="#memes" id="enlace-memes">Memes</a>
+                <a href="#info-1" id="enlace-info">Información de la serie</a>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+
+    
+
+		<div class="pelicula-principal-meme">
+            <video src="../videos/bee-movie.mp4" autoplay loop></video>
+			<button id="pausa-reanudar">Pausa</button>
+		</div>
+
+
+	</main>
+
+	<div  class="container-carrosel-bordes">
+		<div class="contenedor-titulo-controles">
+			<!-- Titulo de la seccion -->
+			<h3 id="memes" class="titulo"> Memes de Bee Movie :D </h3>
+
+		</div>
+	</div>
+
+
+	<div class="container-img">
+        
+        <div class="box-img">
+            <a>
+                <figure>
+					<!-- Primera imagen horizontal -->
+                    <img src="../img/memes/bee-movie-2.webp" alt="img-galeria">
+                </figure>
+            </a>
+        </div>
+        <div class="box-img">
+            <a>
+                <figure>
+					<!-- Segunda imagen cuadrada -->
+					<img src="../img/memes/bee-movie-gif-3.gif" alt="img-galeria">
+                </figure>
+            </a>
+        </div>
+        <div class="box-img">
+            <a>
+                <figure>
+					<!-- Tercera imagen cuadrada -->
+                    <img src="../img/memes/bee-movie-gif.gif" alt="img-galeria">
+                </figure>
+            </a>
+        </div>
+        <div class="box-img">
+            <a>
+                <figure>
+					<!-- Cuarta imagen vertial -->
+                    <img src="../img/memes/bee-movie-vertical.webp" alt="img-galeria">
+                </figure>
+            </a>
+        </div>
+        <div class="box-img">
+            <a>
+                <figure>
+					<!-- Quinta imagen cuadrada -->
+                    <img src="../img/memes/bee-movie-1.jpg" alt="img-galeria">
+                </figure>
+            </a>
+        </div>
+        <div class="box-img">
+            <a>
+                <figure>
+					<!-- Sexta imagen abajo izquierda cuadrada -->
+                    <img src="../img/memes/bee-movie.png" alt="img-galeria">
+                </figure>
+            </a>
+        </div>
+        <div class="box-img">
+            <a>
+                <figure>
+					<!-- Ultima imagen abajo derecha cuadrada -->
+                    <img src="../img/memes/bee-movie-gif-2.gif" alt="img-galeria">
+                </figure>
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+	<br>
+	<br>
+	<br>
+
+	<div  class="container-carrosel-bordes">
+
+		<div class="informacion-final" style="background-image: url('../img/banners/bee-movie.jpg');"  id = "info-1">
+			<div class="contenedor">
+				<br>
+				<br>
+				<br>
+				<br>
+				<div class="centro fondo-translucido-redondo">
+					<!-- Titulo y la descripcion-->
+					<h3 class="titulo"> Información de la serie</h3>
+					
+					<p class="centro descripcion tamano-descipcion">
+
+						"Bee Movie" es una película de animación por computadora producida por DreamWorks Animation 
+						y estrenada en el año 2007. La trama sigue las aventuras de una abeja llamada Barry Benson, 
+						quien se siente frustrada por el trabajo rutinario en la colmena y decide explorar el mundo exterior. 
+						Durante su aventura, Barry se hace amigo de una florista llamada Vanessa y descubre que los humanos 
+						están robando y vendiendo la miel que las abejas producen.
+
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<br>
+	<br>
+
+
+
+
+
+	
+
+
+	<!-- Scripts de javascript -->
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="../js/main.js"></script>
+
+    <script src="../js/own/jquery.min.js"></script>
+    <script src="../js/own/owl.carousel.min.js"></script>
+    <script src="../js/own/main.js"></script>
+
+	<script>
+		const video = document.querySelector('.pelicula-principal-meme video');
+		const btnPausaReanudar = document.querySelector('#pausa-reanudar');
+
+		btnPausaReanudar.addEventListener('click', function() {
+			if (video.paused) {
+				video.play();
+				btnPausaReanudar.textContent = 'Pausa';
+			} else {
+				video.pause();
+				btnPausaReanudar.textContent = 'Reanudar';
+			}
+		});
+
+
+		if (video) {
+		video.addEventListener('load', function() {
+			const videoHeight = video.offsetHeight;
+			const paddingBottom = window.innerHeight - videoHeight;
+			document.querySelector('.pelicula-principal-meme-v').style.paddingBottom = paddingBottom + 'px';
+		});
+		}
+	</script>
+
+	  
+
+
+</body>
+</html>
+
